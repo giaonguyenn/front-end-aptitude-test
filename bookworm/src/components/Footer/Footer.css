@@ -1,0 +1,9 @@
+.footer-container {
+	margin: 0;
+	border: 1px solid #DBDBDB;
+}
+
+.credit {
+	margin-right: 15px;
+    float: right;
+}

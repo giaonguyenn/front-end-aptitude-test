@@ -1,0 +1,21 @@
+.book-display {
+	width: 28%;
+	min-width: 300px;
+	margin: 15px;
+	border: 1px solid #DBDBDB;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 2px;
+	transition:all 0.3s ease;
+}
+
+.book-display:hover
+{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.book-title {
+	font-size: 1em;
+}

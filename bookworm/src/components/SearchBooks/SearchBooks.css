@@ -1,0 +1,44 @@
+.search-books {
+	margin-top: 5%;
+	min-height: 25vh;
+	overflow: hidden;
+}
+
+.book-conatiner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.book {
+	margin-left: 10%;
+	/*padding: 0 10px 0 20px;*/
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.modal-container {
+	padding: 20px 25px;
+	max-height: 85vh;
+	overflow-y: scroll;
+}
+
+.modal-container::-webkit-scrollbar { 
+    display: none; 
+}
+
+.close-modal-x {
+	align-items: left;
+	text-decoration: none;
+	position: fixed;
+    left: 15px;
+    top: 15px
+}
+
+.social-sharing-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3px;
+}
