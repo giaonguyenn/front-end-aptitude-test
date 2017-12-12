@@ -20,3 +20,16 @@
   font-size: 2.5em;
   margin-top: 5px;
 }
+
+@media (max-width: 420px) {
+    .App-title {
+        font-size: 3.5em;
+    }
+    .App-subtlte {
+      font-size: .5em;
+    }
+    button {
+      font-size: 1em;
+      /*padding: 5px;*/
+    }
+}
