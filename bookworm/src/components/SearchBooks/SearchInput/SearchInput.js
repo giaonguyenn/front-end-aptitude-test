@@ -10,7 +10,7 @@ export default class SearchInput extends Component {
 				<div>
 					<h1>Search Books by Title or Author</h1>
 				</div>
-				<div>
+				<div className="input-field">
 					<input type="text" placeholder="Enter Keyword or Title" onChange={ (e) => { this.props.findBooks(e.target.value) } }></input>
 					<input type="text" placeholder="Enter Author's Name" onChange={ (e) => { this.props.findBooks(e.target.value) } }></input>
 				</div>

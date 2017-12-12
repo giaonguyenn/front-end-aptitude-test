@@ -93,6 +93,7 @@ export default class SearchBooks extends Component {
 	                    visible= { this.state.visible }
 	                    width="500"
 	                    effect="fadeInDown"
+	                    style="max-width: 75vw;"
 	                    onClickAway={ () => this.closeModal() }
 	                >
 	                    <div className="modal-container">
