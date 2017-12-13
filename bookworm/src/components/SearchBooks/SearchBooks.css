@@ -13,9 +13,9 @@
 }
 
 .book {
-	margin-left: 10%;
 	display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .modal-container {
