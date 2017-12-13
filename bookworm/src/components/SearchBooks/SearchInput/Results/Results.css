@@ -5,7 +5,7 @@
 	border: 1px solid #DBDBDB;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
-	padding: 2px;
+	padding: 10px;
 	transition:all 0.3s ease;
 }
 
@@ -14,8 +14,30 @@
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+
+}
+
+.book-display:hover > .book-title-container {
+	background-color: #DABB9E;
+}
+
+.book-display:hover > .card-rating {
+	color: #DABB9E;
+}
+
+.book-title-container {
+	background-color: rgba(165, 96, 84, 0.6);
+	border-radius: 5px;
+	margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .book-title {
 	font-size: 1em;
+	font-weight: 300;
+	color: white;
 }

@@ -60,8 +60,9 @@ export default class SearchBooks extends Component {
 			return (
 				<Results 
 					title = { book.volumeInfo.title }
-					imageUrl = { book.volumeInfo.imageLinks }
+					thumbnail = { book.volumeInfo.imageLinks.thumbnail }
 					book = { book }
+					rating = { book.volumeInfo.averageRating }
 					visible = { this.state.visible }
 					openModal = { this.openModal.bind(this) }
 					closeModal = { this.closeModal.bind(this) }
@@ -97,12 +98,16 @@ export default class SearchBooks extends Component {
 	                    onClickAway={ () => this.closeModal() }
 	                >
 	                    <div className="modal-container">
-	                    	<a className="close-modal-x" href="javascript:void(0);" onClick={() => this.closeModal()}>X</a>
-	                        <h1> { book.volumeInfo.title } </h1>
-	                        <img src={ book.volumeInfo.imageLinks.thumbnail } alt="Unavailable"/>	
-	                        <p> Authors: { book.volumeInfo.authors } </p>
-	                        <p> Average Rating: { book.volumeInfo.averageRating } </p>
-	                        <p> Category: { book.volumeInfo.categories } </p>
+	                    	<div className="close-container">
+	                    		<a className="close-modal-x" href="javascript:void(0);" onClick={() => this.closeModal()}>X</a>
+	                    	</div>
+	                        <h1 className="modal-title"> { book.volumeInfo.title } </h1>
+	                        <div className="modal-img">
+	                        	<img src={ book.volumeInfo.imageLinks.thumbnail } alt="Unavailable"/>
+	                        </div>	
+	                        <p> <span> Authors: </span> { book.volumeInfo.authors } </p>
+	                        <p> <span> Average Rating: </span> { book.volumeInfo.averageRating } </p>
+	                        <p> <span> Category: </span> { book.volumeInfo.categories } </p>
 	                        <p> { book.volumeInfo.description } </p>
 
 	                        <div className="social-sharing-buttons">

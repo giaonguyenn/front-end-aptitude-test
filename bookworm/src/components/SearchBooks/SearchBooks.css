@@ -14,7 +14,6 @@
 
 .book {
 	margin-left: 10%;
-	/*padding: 0 10px 0 20px;*/
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -23,18 +22,40 @@
 	padding: 20px 25px;
 	max-height: 85vh;
 	overflow-y: scroll;
+	text-align: left;
 }
 
 .modal-container::-webkit-scrollbar { 
     display: none; 
 }
 
+.close-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(165, 96, 84, 0.6);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
 .close-modal-x {
-	align-items: left;
 	text-decoration: none;
-	position: fixed;
-    left: 15px;
-    top: 15px
+    color: white;
+}
+
+.modal-title {
+	font-size: 1.75em;
+	text-align: center;
+}
+
+.modal-img {
+	display: flex;
+	justify-content: center;
 }
 
 .social-sharing-buttons {

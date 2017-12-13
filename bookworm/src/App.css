@@ -17,7 +17,7 @@ button {
 }
 
 button:hover {
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(165, 96, 84, 0.6);
 	color: white;
 }
 
@@ -35,4 +35,8 @@ input {
 	margin: 15px;
 	border-radius: 5px;
 	border: 1px solid #DBDBDB;
+}
+
+span {
+	font-weight: bold;
 }
