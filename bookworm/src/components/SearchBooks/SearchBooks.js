@@ -1,21 +1,12 @@
 import React, { Component } from "react";
 import $ from "jquery";
+import { FacebookButton } from 'react-social-sharebuttons';
 
 import "./SearchBooks.css";
 
 import SearchInput from "./SearchInput/SearchInput";
 import Results from "./SearchInput/Results/Results";
 import Modal from "react-awesome-modal";
-import {
-  TwitterButton,
-  FacebookLikeButton,
-  FacebookShareButton,
-  FacebookMessengerButton,
-  GoogleButton,
-  GoogleHangoutButton,
-  PinterestButton
-} from 'react-social-buttons';
-// import PropTypes from "prop-types";
 
 export default class SearchBooks extends Component {
 	constructor(props) {
@@ -51,10 +42,6 @@ export default class SearchBooks extends Component {
         });
     }
 
-    isBrowser () {
-	    return !(typeof document === "undefined" || typeof window === "undefined");
-	}
-
 	render() {
 		const books = this.state.books.map((book, i) => {
 			return (
@@ -72,13 +59,8 @@ export default class SearchBooks extends Component {
 
 		const book = this.state.book.book;
 
-		let url = ''
-		   if (this.isBrowser()) { url = window.location.href; }
-		 
-		   // let whatsAppProps = {
-		   //   msg: 'test',
-		   //   button: <span>{'Your custom content'}</span>,
-		   // };
+		const url = 'https://github.com/giaonguyenn?tab=repositories';
+    	const layout = 'box_count';
 
 		return (
 			<div className="search-books">
@@ -111,13 +93,7 @@ export default class SearchBooks extends Component {
 	                        <p> { book.volumeInfo.description } </p>
 
 	                        <div className="social-sharing-buttons">
-	                        	<div><FacebookLikeButton url={url} /></div>
-						       	<div><FacebookShareButton url={url} /></div>
-						       	<div><FacebookMessengerButton url={url} /></div>
-						       	<div><TwitterButton url={url} text="this page is cool"/></div>
-						       	<div><GoogleButton url={url} /></div>
-						       	<div><GoogleHangoutButton url={url} /></div>
-						       	<div><PinterestButton url={url} /></div>
+	                        	<FacebookButton url={url} share={true} />
 	                        </div>
 
 	                    </div>
